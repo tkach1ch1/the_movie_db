@@ -15,7 +15,7 @@ const Layout = ({ children }: LayoutProps) => {
             }}
         >
             <StyledContainer
-                maxWidth='sm'
+                maxWidth='md'
                 disableGutters
             >
                 <Header />

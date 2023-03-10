@@ -4,6 +4,10 @@ import { Box } from '@mui/material'
 
 export const SearchBarWrapper = styled(Box)({
     height: '50px',
+    width: '100%',
+    [theme.breakpoints.down('xs')]: {
+        height: '120px',
+    },
 })
 
 export const SearchForm = styled('form')({
@@ -11,6 +15,10 @@ export const SearchForm = styled('form')({
     display: 'flex',
     justifyContent: 'space-between',
     gap: '25px',
+    [theme.breakpoints.down('xs')]: {
+        flexDirection: 'column',
+        alignItems: 'center',
+    },
 })
 
 export const SearchInputContainer = styled(Box)({
@@ -57,5 +65,9 @@ export const SearchButton = styled('button')({
     },
     '&:active': {
         transform: 'scale(0.96)',
+    },
+    [theme.breakpoints.down('xs')]: {
+        padding: '12px',
+        width: '100px',
     },
 })

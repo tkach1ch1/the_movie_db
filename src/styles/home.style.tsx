@@ -23,9 +23,11 @@ export const DescriptionTitle = styled('h1')({
     fontWeight: '200',
     fontStyle: 'italic',
     color: theme.palette.primary.main,
+    textAlign: 'center',
 })
 
 export const DescriptionText = styled('p')({
     fontSize: '18px',
     color: theme.palette.primary.light,
+    textAlign: 'center',
 })

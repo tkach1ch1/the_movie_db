@@ -6,9 +6,11 @@ import {
     SearchInputContainer,
     StyledIcon,
 } from '@/styles/search_bar.style'
-import React, { CSSProperties, useState } from 'react'
+import React, { CSSProperties, useEffect, useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
 import { useRouter } from 'next/router'
+import { useAppDispatch } from '@/hooks/reducerHook'
+import { getSearchInput } from '@/redux/searchReducer'
 
 interface SearchBarProps {
     width: string
@@ -19,12 +21,15 @@ const SearchBar = ({ width }: SearchBarProps) => {
 
     const router = useRouter()
 
+    const dispatch = useAppDispatch()
+
     const onInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearch(event.target.value)
     }
 
     const onHandleClick = (event: React.SyntheticEvent) => {
         event.preventDefault()
+        dispatch(getSearchInput(search))
         router.push('/result')
     }
     return (
@@ -35,6 +40,7 @@ const SearchBar = ({ width }: SearchBarProps) => {
                         type='search'
                         placeholder='Search for movies'
                         onChange={onInputChange}
+                        value={search}
                     />
                     <StyledIcon>
                         <BsSearch style={{ width: '20px', height: '20px' }} />
