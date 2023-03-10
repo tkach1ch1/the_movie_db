@@ -6,11 +6,15 @@ import {
     SearchInputContainer,
     StyledIcon,
 } from '@/styles/search_bar.style'
-import React, { useState } from 'react'
+import React, { CSSProperties, useState } from 'react'
 import { BsSearch } from 'react-icons/bs'
 import { useRouter } from 'next/router'
 
-const SearchBar = () => {
+interface SearchBarProps {
+    width: string
+}
+
+const SearchBar = ({ width }: SearchBarProps) => {
     const [search, setSearch] = useState('')
 
     const router = useRouter()
@@ -25,7 +29,7 @@ const SearchBar = () => {
     }
     return (
         <SearchBarWrapper>
-            <SearchForm>
+            <SearchForm style={{ maxWidth: width }}>
                 <SearchInputContainer>
                     <SearchInput
                         type='search'

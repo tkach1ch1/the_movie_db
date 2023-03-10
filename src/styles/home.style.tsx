@@ -1,5 +1,6 @@
 import { theme } from '@/assets/theme'
 import styled from '@emotion/styled'
+import { Box } from '@mui/material'
 
 export const HomeWrapper = styled('section')({
     display: 'flex',
@@ -8,7 +9,7 @@ export const HomeWrapper = styled('section')({
     marginTop: '150px',
 })
 
-export const DescriptionWrapper = styled('div')({
+export const DescriptionWrapper = styled(Box)({
     width: '100%',
     display: 'flex',
     alignItems: 'center',

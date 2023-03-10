@@ -1,6 +1,6 @@
 import { theme } from '@/assets/theme'
 import styled from '@emotion/styled'
-import { Container } from '@mui/material'
+import { Box, Container } from '@mui/material'
 import Link from 'next/link'
 
 export const StyledContainer = styled(Container)({
@@ -21,7 +21,7 @@ export const NavBarContainer = styled('nav')({
     borderBottom: '1px solid #535F77',
 })
 
-export const NavBarWrapper = styled('div')({
+export const NavBarWrapper = styled(Box)({
     height: '100%',
     padding: '0 40px',
     display: 'flex',
@@ -40,6 +40,7 @@ export const NavLink = styled(Link)({
 })
 
 export const MainSection = styled('main')({
-    padding: '0 40px',
+    padding: '40px',
     flexGrow: 1,
+    overflow: 'scroll',
 })

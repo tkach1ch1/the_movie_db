@@ -1,8 +1,8 @@
 import { theme } from '@/assets/theme'
 import styled from '@emotion/styled'
+import { Box } from '@mui/material'
 
-export const SearchBarWrapper = styled('div')({
-    width: '100%',
+export const SearchBarWrapper = styled(Box)({
     height: '50px',
 })
 
@@ -13,7 +13,7 @@ export const SearchForm = styled('form')({
     gap: '30px',
 })
 
-export const SearchInputContainer = styled('div')({
+export const SearchInputContainer = styled(Box)({
     position: 'relative',
     height: '100%',
     flexGrow: 1,
@@ -34,7 +34,7 @@ export const SearchInput = styled('input')({
     },
 })
 
-export const StyledIcon = styled('div')({
+export const StyledIcon = styled(Box)({
     position: 'absolute',
     top: '30%',
     transform: 'translate(130%)',

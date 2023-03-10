@@ -9,7 +9,7 @@ import {
 const Home = () => {
     return (
         <HomeWrapper>
-            <SearchBar />
+            <SearchBar width='100%' />
             <DescriptionWrapper>
                 <DescriptionTitle>Welcome to The Movie DB!</DescriptionTitle>
                 <DescriptionText>
