@@ -1,7 +1,12 @@
+import Movies from '@/components/movies'
 import React from 'react'
 
 const Favorites = () => {
-    return <div>Favorites</div>
+    return (
+        <>
+            <Movies />
+        </>
+    )
 }
 
 export default Favorites

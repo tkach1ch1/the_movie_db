@@ -10,7 +10,7 @@ export const SearchForm = styled('form')({
     height: 'inherit',
     display: 'flex',
     justifyContent: 'space-between',
-    gap: '30px',
+    gap: '25px',
 })
 
 export const SearchInputContainer = styled(Box)({

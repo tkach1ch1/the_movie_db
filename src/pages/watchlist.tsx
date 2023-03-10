@@ -1,7 +1,12 @@
+import Movies from '@/components/movies'
 import React from 'react'
 
 const Watchlist = () => {
-    return <div>Watchlist</div>
+    return (
+        <>
+            <Movies />
+        </>
+    )
 }
 
 export default Watchlist

@@ -1,6 +1,7 @@
 import {
     MovieElement,
     MovieImg,
+    MovieLink,
     MovieTitle,
     MovieySubInfoBox,
     SubInfo,
@@ -11,12 +12,14 @@ import React from 'react'
 const Movie = () => {
     return (
         <MovieElement>
-            <MovieImg />
-            <MovieTitle>Star Wars</MovieTitle>
-            <MovieySubInfoBox>
-                <SubInfo>2015, &nbsp;</SubInfo>
-                <SubInfoGenre>Comedy, Drama</SubInfoGenre>
-            </MovieySubInfoBox>
+            <MovieLink href='#'>
+                <MovieImg id='movie_img' />
+                <MovieTitle id='movie_title'>Star Wars</MovieTitle>
+                <MovieySubInfoBox>
+                    <SubInfo>2015, &nbsp;</SubInfo>
+                    <SubInfoGenre>Comedy, Drama</SubInfoGenre>
+                </MovieySubInfoBox>
+            </MovieLink>
         </MovieElement>
     )
 }

@@ -1,6 +1,7 @@
 import { theme } from '@/assets/theme'
 import styled from '@emotion/styled'
 import { Box } from '@mui/material'
+import Link from 'next/link'
 
 export const MoviesGrid = styled(Box)({
     display: 'grid',
@@ -18,6 +19,19 @@ export const MovieElement = styled(Box)({
     flexDirection: 'column',
 })
 
+export const MovieLink = styled(Link)({
+    textDecoration: 'none',
+    '&:hover #movie_img': {
+        border: '2px solid #348feb',
+        transition: 'all 0.5s',
+        cursor: 'pointer',
+    },
+    '&:hover #movie_title': {
+        color: '#348feb',
+        transition: 'all 0.3s',
+    },
+})
+
 export const MovieImg = styled(Box)({
     backgroundColor: '#3b4d9c',
     height: '246px',
@@ -25,11 +39,6 @@ export const MovieImg = styled(Box)({
     overflow: 'hidden',
     marginBottom: '10px',
     border: '2px solid transparent',
-    '&:hover': {
-        border: '2px solid #348feb',
-        transition: 'all 0.5s',
-        cursor: 'pointer',
-    },
 })
 
 export const MovieTitle = styled('h4')({

@@ -17,7 +17,7 @@ export const StyledContainer = styled(Container)({
 
 export const NavBarContainer = styled('nav')({
     width: '100%',
-    height: '60px',
+    minHeight: '60px',
     borderBottom: '1px solid #535F77',
 })
 
